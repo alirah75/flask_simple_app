@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <a href="{{ url_for('delete', todo_id=context.id) }}" class="btn btn-danger">Delete</a>
+    <h3>{{ context.content }}</h3>
+    <small>{{ context.date.strftime('%Y-%m-%d') }}</small>
+{% endblock %}
